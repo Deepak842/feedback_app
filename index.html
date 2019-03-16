@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Swiper 3D carousel</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/emoji.css">
+
+
+    <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCHWWrJeZzz-eNNaAcJCV24wnBrZtetKbA",
+            authDomain: "customerfeedback-ad61b.firebaseapp.com",
+            databaseURL: "https://customerfeedback-ad61b.firebaseio.com",
+            projectId: "customerfeedback-ad61b",
+            storageBucket: "customerfeedback-ad61b.appspot.com",
+            messagingSenderId: "629573867633"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+
+</head>
+
+<body>
+
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+
+                <div id="slide_one"></div>
+
+                <div class="slide_one">
+                    <!--Emoji    -->
+                    <div class="feedback-wrapper at-bottom">
+                        <div class="feedback-title">
+                            <h1 class="text-center">How would you rate Our Food?
+                            </h1>
+                        </div>
+                        <div class="feedback-content">
+                            <div class="feedback-faces">
+                                <div class="row">
+                                    <div class="face-wrapper slide-out-y-alt">
+                                        <div class="face-counter invisible" data-title-none="No one rated it like this" data-title-one="One person rated it like this" data-title-many="other people rated it like this"></div>
+                                        <input class="rate-input hidden" id="rate-1" type="radio" name="rating" value="1" />
+                                        <label class="face grayscale face-disappointed" for="rate-1" data-hint="It sucks...">
+                                            <div class="eyes-wrapper">
+                                                <div class="eye">
+                                                    <div class="pupil">
+                                                        <div class="eyelid"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="eye">
+                                                    <div class="pupil">
+                                                        <div class="eyelid"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="mouth-wrapper">
+                                                <div class="mouth"></div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="face-wrapper slide-out-y-alt">
+                                        <div class="face-counter invisible" data-title-none="No one rated it like this" data-title-one="One person rated it like this" data-title-many="other people rated it like this"></div>
+                                        <input class="rate-input hidden" id="rate-2" type="radio" name="rating" value="2" />
+                                        <label class="face grayscale face-sad" for="rate-2" data-hint="It's ok. I guess.">
+                                            <div class="eyes-wrapper">
+                                                <div class="eye">
+                                                    <div class="pupil">
+                                                        <div class="eyelid"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="eye">
+                                                    <div class="pupil">
+                                                        <div class="eyelid"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="mouth-wrapper">
+                                                <div class="mouth"></div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="face-wrapper slide-out-y-alt">
+                                        <div class="face-counter invisible" data-title-none="No one rated it like this" data-title-one="One person rated it like this" data-title-many="other people rated it like this"></div>
+                                        <input class="rate-input hidden" id="rate-3" type="radio" name="rating" value="3" />
+                                        <label class="face grayscale face-happy" for="rate-3" data-hint="This is great!">
+                                            <div class="eyes-wrapper">
+                                                <div class="eye">
+                                                    <div class="pupil">
+                                                        <div class="eyelid"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="eye">
+                                                    <div class="pupil">
+                                                        <div class="eyelid"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="mouth-wrapper">
+                                                <div class="mouth"></div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="face-wrapper slide-out-y-alt">
+                                        <div class="face-counter invisible" data-title-none="No one rated it like this" data-title-one="One person rated it like this" data-title-many="other people rated it like this"></div>
+                                        <input class="rate-input hidden" id="rate-4" type="radio" name="rating" value="4" />
+                                        <label class="face grayscale face-love" for="rate-4" data-hint="OMG! I love it!">
+                                            <div class="eyes-wrapper">
+                                                <div class="eye">
+                                                    <div class="pupil">
+                                                        <div class="eyelid"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="eye">
+                                                    <div class="pupil">
+                                                        <div class="eyelid"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="mouth-wrapper">
+                                                <div class="mouth"></div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="faces-hint text-center text-gray" data-default-hint="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Emoji--End -->
+                </div>
+            </div>
+            <div class="swiper-slide">
+
+                <div id="slide_two"></div>
+
+                <div class="slide_two">
+                    <!--Emoji    -->
+
+                    <div class="feedback-wrapper at-bottom">
+                        <div class="feedback-title">
+                            <h1 class="text-center">How would you rate Our Service?
+                            </h1>
+                        </div>
+                        <div class="feedback-content">
+                            <div class="feedback-faces">
+                                <div class="row">
+                                    <div class="face-wrapper slide-out-y-alt">
+                                        <div class="face-counter invisible" data-title-none="No one rated it like this" data-title-one="One person rated it like this" data-title-many="other people rated it like this"></div>
+                                        <input class="rate-input hidden" id="rate-1" type="radio" name="rating" value="1" />
+                                        <label class="face grayscale face-disappointed" for="rate-1" data-hint="It sucks...">
+                                            <div class="eyes-wrapper">
+                                                <div class="eye">
+                                                    <div class="pupil">
+                                                        <div class="eyelid"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="eye">
+                                                    <div class="pupil">
+                                                        <div class="eyelid"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="mouth-wrapper">
+                                                <div class="mouth"></div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="face-wrapper slide-out-y-alt">
+                                        <div class="face-counter invisible" data-title-none="No one rated it like this" data-title-one="One person rated it like this" data-title-many="other people rated it like this"></div>
+                                        <input class="rate-input hidden" id="rate-2" type="radio" name="rating" value="2" />
+                                        <label class="face grayscale face-sad" for="rate-2" data-hint="It's ok. I guess.">
+                                            <div class="eyes-wrapper">
+                                                <div class="eye">
+                                                    <div class="pupil">
+                                                        <div class="eyelid"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="eye">
+                                                    <div class="pupil">
+                                                        <div class="eyelid"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="mouth-wrapper">
+                                                <div class="mouth"></div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="face-wrapper slide-out-y-alt">
+                                        <div class="face-counter invisible" data-title-none="No one rated it like this" data-title-one="One person rated it like this" data-title-many="other people rated it like this"></div>
+                                        <input class="rate-input hidden" id="rate-3" type="radio" name="rating" value="3" />
+                                        <label class="face grayscale face-happy" for="rate-3" data-hint="This is great!">
+                                            <div class="eyes-wrapper">
+                                                <div class="eye">
+                                                    <div class="pupil">
+                                                        <div class="eyelid"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="eye">
+                                                    <div class="pupil">
+                                                        <div class="eyelid"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="mouth-wrapper">
+                                                <div class="mouth"></div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="face-wrapper slide-out-y-alt">
+                                        <div class="face-counter invisible" data-title-none="No one rated it like this" data-title-one="One person rated it like this" data-title-many="other people rated it like this"></div>
+                                        <input class="rate-input hidden" id="rate-4" type="radio" name="rating" value="4" />
+                                        <label class="face grayscale face-love" for="rate-4" data-hint="OMG! I love it!">
+                                            <div class="eyes-wrapper">
+                                                <div class="eye">
+                                                    <div class="pupil">
+                                                        <div class="eyelid"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="eye">
+                                                    <div class="pupil">
+                                                        <div class="eyelid"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="mouth-wrapper">
+                                                <div class="mouth"></div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="faces-hint text-center text-gray" data-default-hint="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Emoji--End -->
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div id="slide_three"></div>
+
+                <div class="slide_three">
+                    <div class="container">
+                        <div class="row text-center">
+                            <div class="col-3 px-1">
+                                <div class="10 box">alternative</div>
+                            </div>
+                            <div class="col-3 px-1">
+                                <div class="10 box">dubstep</div>
+                            </div>
+                            <div class="col-3 px-1">
+                                <div class="10 box">jazz</div>
+                            </div>
+                        </div>
+
+                        <div class="row text-center my-3">
+                            <div class="col-3 px-1">
+                                <div class="10 box">alternative</div>
+                            </div>
+                            <div class="col-3 px-1">
+                                <div class="10 box">dubstep</div>
+                            </div>
+                            <div class="col-3 px-1">
+                                <div class="10 box">jazz</div>
+                            </div>
+                            <div class="col-3 px-1">
+                                <div class="10 box">jazz</div>
+                            </div>
+                        </div>
+
+                        <div class="row text-center">
+                            <div class="col-3 px-1">
+                                <div class="10 box">alternative</div>
+                            </div>
+                            <div class="col-3 px-1">
+                                <div class="10 box">dubstep</div>
+                            </div>
+                            <div class="col-3 px-1">
+                                <div class="10 box">jazz</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="swiper-slide" id="slide_four">
+                <div class="container input_box px-2 pt-5">
+
+                                <form>
+                               <div class="first_box">
+                                    <div>
+                                        <input type="text" name="" required="">
+                                        <label>Full name</label>
+                                    </div>
+                                    <div>
+                                        <input type="tel" name="" maxlength="10" required="">
+                                        <label>Phone no.</label>
+                                    </div>
+                                    <div>
+                                        <input type="email" name="" required="">
+                                        <label>Email</label>
+                                    </div>
+                                    </div>
+                                    <div class="second_box my-2">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <span>Birthday</span><br>
+                                            <input type="date" required="">
+                                            
+                                        </div>
+                                        <div class="col-6">
+                                          <span>Anniversay(if any)</span><br>
+                                            <input type="date">
+                                        </div>
+                                        </div>
+                                       
+                                    </div>
+
+                                    <div class="third_box">
+                                        <textarea required=""></textarea>
+                                        <label class="pl-2">Comments(if any)</label>
+                                    </div>
+
+                                </form>
+                        </div>
+                    </div>
+
+
+            <div class="swiper-slide" id="slide_five">
+                <div class="slide_five">
+                <h1>Thank You</h1>
+                </div>
+            </div>
+
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"><button class="btn_continue">Continue</button>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/swiper.min.js"></script>
+    <script src="js/emoji.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            effect: 'coverflow',
+
+
+            slidesPerView: '1',
+            speed: 600,
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'progressbar',
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+
+</body>
+
+
+
+</html>

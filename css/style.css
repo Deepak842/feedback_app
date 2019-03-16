@@ -1,0 +1,211 @@
+body {
+    background: #fff;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+.swiper-container {
+    width: 320px;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.swiper-slide {
+    width: 320px;
+    height: 100vh;
+    background: #fff;
+    /*    border-radius: 10px;*/
+    /*    border: 1px solid grey;*/
+    overflow: hidden;
+}
+
+/*
+.greeting_thank {
+    height: 100vh;
+    background: black;
+    color: white;
+}
+*/
+
+.swiper-button-next {
+    top: 90% !important;
+    left: 38% !important;
+    background: none !important;
+}
+
+.btn_continue {
+    background: #f91d04;
+    border-radius: 50px !important;
+    font-size: 14px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.swiper-button-next.swiper-button-disabled {
+    opacity: 0;
+}
+
+#slide_one,
+#slide_two,
+#slide_three {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;
+    height: 100vh;
+}
+
+#slide_one {
+    background-image: url(../image/s1.png);
+}
+
+#slide_two {
+    background-image: url(../image/s10.png);
+}
+
+#slide_three {
+    background-image: url(../image/s2.png);
+}
+
+.slide_three {
+    position: absolute;
+    top: 77%;
+    transform: translateY(-50%);
+    width: 100%;
+
+}
+
+.slide_three .box {
+    background: #fff;
+    border-radius: 50px;
+    font-size: 12px;
+    color: #f91d04;
+    padding: 1px 0px;
+}
+
+.slide_three .box:hover {
+    background: #f91d04;
+    color: #fff;
+}
+.slide_three .box:active {
+    background: #f91d04;
+    color: #fff;
+}
+
+/*
+.slide_one, .slide_two, .slide_three {
+    position: absolute;
+    
+}
+*/
+
+#slide_four {}
+
+/*Input*/
+.first_box, .third_box {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, .1);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+}
+.third_box {
+    padding: 30px 5px 10px 5px;
+}
+.second_box {
+    background: #fff;
+    padding: 10px;
+    border: 1px solid rgba(0,0,0, .1);
+    box-shadow: 0 5px 10px rgba(0,0,0, .2);
+}
+.second_box input {
+    border: none !important;
+    outline: none !important;
+    text-transform: uppercase;
+    color: rebeccapurple;
+    cursor: pointer;
+}
+.second_box span {
+    color: #666;
+}
+.input_box input {
+    padding: 5px 0;
+    margin-bottom: 15px;
+}
+
+.input_box textarea {
+    height: 45px;
+    padding: 15px 5px 10px 5px;
+    margin-bottom: 0px;
+}
+
+.input_box input,
+.input_box textarea {
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: none;
+    outline: none;
+    border: none;
+   
+}
+
+.input_box textarea {
+}
+
+.input_box input[type="submit"] {
+    border-bottom: none;
+    cursor: pointer;
+    background: #f7497d;
+    color: #fff;
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+
+.input_box form div {
+    position: relative;
+}
+
+.input_box form div label {
+    position: absolute;
+    top: 18px;
+    left: 0;
+    color: #999;
+    transition: .5s;
+    pointer-events: none;
+}
+
+.input_box input:focus ~ label,
+.input_box textarea:focus ~ label,
+.input_box input:valid ~ label,
+.input_box textarea:valid ~ label
+{
+    top: -4px;
+    left: 0;
+    color: #f7497d;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.input_box input:focus,
+.input_box textarea:focus,
+.input_box input:valid,
+.input_box textarea:valid {
+    border-bottom: 2px solid #f7497d;
+}
+
+#slide_five {
+    background: #000;
+    color: #fff;
+}
+.slide_five {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-05%);
+    width: 320px;
+    text-align: center;
+    
+}
+
